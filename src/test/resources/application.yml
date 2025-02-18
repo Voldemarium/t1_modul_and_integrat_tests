@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: test-example
+  datasource:
+#    url: jdbc:postgresql://trololo_host:5432/
+    url: jdbc:tc:postgresql:11.13:///test_db
+#    username: ""
+#    password: ""
+    driverClassName: org.testcontainers.jdbc.ContainerDatabaseDriver
+    #driverClassName: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+server:
+  port: 8282
