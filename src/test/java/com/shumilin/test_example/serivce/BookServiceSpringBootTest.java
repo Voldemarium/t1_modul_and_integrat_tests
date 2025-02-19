@@ -1,6 +1,5 @@
 package com.shumilin.test_example.serivce;
 
-import com.shumilin.test_example.PostgresContainer;
 import com.shumilin.test_example.dto.BookDto;
 import com.shumilin.test_example.entity.Book;
 import com.shumilin.test_example.repository.BookRepository;
@@ -16,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @ActiveProfiles("test")
 @SpringBootTest
-class BookServiceSpringBootTest extends PostgresContainer {
+class BookServiceSpringBootTest {
     @Autowired
     private BookService bookService;
 
