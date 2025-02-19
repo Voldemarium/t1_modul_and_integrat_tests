@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: test-example
+  datasource:
+    url: jdbc:postgresql://trololo_host:5432/
+#    url: jdbc:tc:postgresql:11.13:///test_db
+    username: ""
+    password: ""
+#    url: jdbc:h2:mem:test
+#    username: sa
+#    password:
+
+#    driverClassName: org.testcontainers.jdbc.ContainerDatabaseDriver
+    driverClassName: org.postgresql.Driver
+#    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+#    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+server:
+  port: 8282
+
+
+
+#  spring.datasource.driver-class-name=org.h2.Driver
+#  spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+#  spring.datasource.username=sa
+#  spring.datasource.password=
