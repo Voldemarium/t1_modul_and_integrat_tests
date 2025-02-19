@@ -18,10 +18,12 @@ public class BookService {
         this.bookRepository = bookRepository;
     }
 
-    public final Function<Book, BookDto> toBookDto = (Book book) -> new BookDto(book.getTitle(), book.getAuthor());
+    public final Function<Book, BookDto> toBookDto = (Book book)
+            -> new BookDto(book.getTitle(), book.getAuthor());
 
     public BookDto getBookByAuthor(String author) {
-        return toBookDto.apply(bookRepository.findByAuthor(author).orElseThrow(EntityNotFoundException::new));
+        return toBookDto.apply(bookRepository.findByAuthor(author)
+                .orElseThrow(EntityNotFoundException::new));
     }
 
 
